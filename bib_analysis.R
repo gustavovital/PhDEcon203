@@ -85,7 +85,7 @@ world <- map_data("world") %>%
 plot_df <- df_cum %>%
   left_join(world, by = "iso3")
 
-# 5. Plot final
+
 ggplot(plot_df, aes(long, lat, group = group, fill = n_cum)) +
   geom_polygon(color = "white", size = 0.05) +
   coord_fixed(1.3) +
